@@ -1,0 +1,90 @@
+body {
+    background: white;
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-style: none;
+    margin: 3%;
+}
+
+p {
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+}
+
+a:link,
+a:visited {
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.container-fluid {
+    background: #d4e1e0;
+    border-radius: 10px;
+    height: 100%;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 100px;
+    color: rgb(0, 69, 50);
+    font-weight: bolder;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: green;
+    font-weight: bolder;
+    text-align: center;
+}
+
+h3,
+#myPlants {
+    font-size: 24px;
+    color: rgb(0, 69, 50);
+    font-weight: bolder;
+}
+
+
+#myPlants,
+.fa-pagelines,
+#main {
+    padding: 22px;
+}
+
+.fa-pagelines {
+    color: rgb(0, 116, 136);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#savedPlants {
+    text-align: left;
+    font-size: 16px;
+    padding: 5px;
+    list-style-type: none;
+    line-height: 30px;
+}
+
+#savedPlants a:link,
+a:active,
+a:visited {
+    background-color: none;
+}
+
+#savedPlants a:hover {
+    background-color: darkslategrey;
+    color: lightgreen;
+    display: block;
+}
+
+#plantWoman {
+    width: 100%;
+    height: auto;
+}
