@@ -11,7 +11,18 @@ body {
 p {
     text-align: justify;
     color: #333;
-    font-size: 16px;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+}
+
+#harvard-study {
+    text-align: justify;
+    color: #333;
+    font-size: 22px;
+    font-style: normal;
+    text-align: justify;
+    margin-top: 40px;
 }
 
 a:link,
@@ -41,14 +52,14 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 35px;
     color: green;
     font-weight: bolder;
     text-align: center;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 28px;
     color: rgb(0, 69, 50);
     font-weight: bolder;
     text-align: center;
@@ -97,7 +108,7 @@ a:visited {
     display: block;
 }
 
-#plantWoman {
-    width: 500px;
-    height: 650px;
+#forestPath {
+    width: 550px;
+    height: 750px;
 }
