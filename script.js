@@ -1,3 +1,12 @@
+
+var queryURL = "https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=k-sJ91dZASAK9fMJxEhTacaKeN9cBPDY5nOmcWJsusk";
+$.ajax({
+    url: queryURL,
+    method: "GET"
+}).then(function (response) {
+    console.log(response);
+});
+=======
 // jQuery ready function to ensure html loads fully before JS is applied
 $(document).ready(function () {
         // KEYS
@@ -86,6 +95,7 @@ $(document).ready(function () {
         // to REMOVE DATA from localStorage:
         // localStorage.removeItem("key");
 
+<<<<<<< HEAD
         // THEN I can also receive recommendations about local parks to visit (this will come from MapQuest and National Park Service API) 
         // 
 
@@ -116,3 +126,8 @@ $(document).ready(function () {
         //                         console.log(err)
         //                 });
         // }
+=======
+// THEN I can also receive recommendations about local parks to visit (this will come from MapQuest and National Park Service API) 
+// 
+
+>>>>>>> d62007e2948019b1755e5e30d58619898791ef38
