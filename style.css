@@ -22,6 +22,10 @@ a:visited {
 
 }
 
+.top-bar-right {
+    margin-top: 10px;
+}
+
 .container-fluid {
     background: #d4e1e0;
     border-radius: 10px;
@@ -43,18 +47,26 @@ h2 {
     text-align: center;
 }
 
-h3,
+h3 {
+    font-size: 24px;
+    color: rgb(0, 69, 50);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 #myPlants {
     font-size: 24px;
     color: rgb(0, 69, 50);
     font-weight: bolder;
+    text-align: left;
 }
-
 
 #myPlants,
 .fa-pagelines,
 #main {
-    padding: 22px;
+    padding: 5px;
+    margin-top: 15px;
 }
 
 .fa-pagelines {
@@ -68,6 +80,7 @@ h3,
     text-align: left;
     font-size: 16px;
     padding: 5px;
+    margin-left:2px;
     list-style-type: none;
     line-height: 30px;
 }
@@ -85,6 +98,6 @@ a:visited {
 }
 
 #plantWoman {
-    width: 100%;
-    height: auto;
+    width: 500px;
+    height: 650px;
 }
