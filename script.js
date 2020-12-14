@@ -1,17 +1,7 @@
 
-var queryURL = "https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=k-sJ91dZASAK9fMJxEhTacaKeN9cBPDY5nOmcWJsusk";
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function (response) {
-    console.log(response);
-});
-=======
 // jQuery ready function to ensure html loads fully before JS is applied
 $(document).ready(function () {
         // KEYS
-        // my eBirds API
-        var birdsKey = "kpre85dgbr8q";
 
         // CORS anywhere 
         var CORS = "https://cors-anywhere.herokuapp.com/";
@@ -19,8 +9,6 @@ $(document).ready(function () {
         // my Trefle API
         var trefleKey = "XFCEuJcUs4V77OvMQjS1Xdkf01F0p_MnkDhaN5FyUSA";
 
-        // eBirds URL
-        var eBirdURL = "https://cors-anywhere.herokuapp.com/api.ebird.org/v2/data/obs/key=kpre85dgbr8q";
 
 
 
@@ -30,10 +18,9 @@ $(document).ready(function () {
 
         // THEN I am presented with my city name, facts, and images about local plants [Trefle]. Syntax: 
 
-        var plant
         var plant = "Oak Tree";
 
-        // // Trefle URL
+        // Trefle URL
         var trefleURL = "https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=k-sJ91dZASAK9fMJxEhTacaKeN9cBPDY5nOmcWJsusk&filter[common_name]=" + plant;
 
         $.ajax({
@@ -52,26 +39,52 @@ $(document).ready(function () {
                 $("tbody").append(tRow);
         });
 
-        // THEN I am presented with facts about local bird life in my area [eBird]. Syntax:
+        // THEN I am presented with facts about local parks in my area. Syntax:
+        var APIKey = "1676721fa532ea2e5a0ab18034cd5a47";
+        var queryURL = "https://api.openweathermap.org/data/2.5/onecall?appid=" + APIKey;
+        var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey;
 
-        var bird = "bohwax";
-        var eBirdURL = "https://cors-anywhere.herokuapp.com/https://api.ebird.org/v2/data/obs/PA/recent" + bird;
+        $("#search-button").click(citySearch)
 
-        $.ajax({
-                url: eBirdURL,
-                method: "GET"
-        }).then(function (birds) {
-                console.log(birds);
+        // search for city in side bar and get data in Console
+        function citySearch(e) {
+                if (e) {
+                        e.preventDefault();
+                }
 
-                var tRow = $("<tr>");
+                // userInput
+                var city = $("#search-input").val()
 
-                var birdTd = $("<td>").text(response.Bird);
+                // jQuery Ajax call to another server [request to get current weather data from API]
+                $.ajax({
+                        url: currentWeatherURL + "&q=" + city,
+                        method: "GET",
+                }).then(function (response) {
+                        return $.ajax({
+                                url: queryURL + "&lat=" + response.coord.lat + "&lon=" + response.coord.lon,
+                                method: "GET",
+                        }).then(function (onecallresponse) {
+                                console.log(onecallresponse)
+                                $("#city-name").text("Current City: " + city);
+                                
+                                $("#humidity").text("Humidity: " + onecallresponse.current.humidity);
 
-                tRow.append(birdTd);
+                                $("#wind-speed").text("Wind Speed: " + onecallresponse.current.wind_speed);
 
-                $("tbody").append(tRow);
-        });
+                                $("#uv-index").text("Current UV-Index: " + onecallresponse.current.uvi);
 
+                                // convert kelvin to fahrenheit (is not working with the display)
+                                var fahrenheit = Math.round((parseFloat(onecallresponse.current.temp) - 273.15) * 1.80 + 32);
+                                console.log(fahrenheit);
+
+                                var degrees = "\u02DA"
+                                $("#temp").text("Current Temperature: " + fahrenheit + degrees);
+
+                        })
+                })
+
+
+        }
 
         // THEN my searches can be appended to the application page (this goes inside the $.ajax({})). Syntax:
         // var tRow = $("<tr>");
@@ -95,11 +108,11 @@ $(document).ready(function () {
         // to REMOVE DATA from localStorage:
         // localStorage.removeItem("key");
 
-<<<<<<< HEAD
         // THEN I can also receive recommendations about local parks to visit (this will come from MapQuest and National Park Service API) 
         // 
 
 })
+
 
 // const inputCharacter = document.getElementById("#search-button");
         // const userSearch = document.getElementById("#search-button");
@@ -126,8 +139,3 @@ $(document).ready(function () {
         //                         console.log(err)
         //                 });
         // }
-=======
-// THEN I can also receive recommendations about local parks to visit (this will come from MapQuest and National Park Service API) 
-// 
-
->>>>>>> d62007e2948019b1755e5e30d58619898791ef38
