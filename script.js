@@ -9,12 +9,15 @@ $.ajax({
     console.log(response.data[1].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[1].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[1].common_name);
     var scientific_nameTd = $("<td>").text(response.data[1].scientific_name);
     var familyTd = $("<td>").text(response.data[1].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -30,12 +33,15 @@ $.ajax({
     console.log(response.data[1].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[1].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[1].common_name);
     var scientific_nameTd = $("<td>").text(response.data[1].scientific_name);
     var familyTd = $("<td>").text(response.data[1].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -50,12 +56,15 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -70,12 +79,15 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -90,12 +102,15 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -110,12 +125,15 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -130,12 +148,15 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });
 
@@ -150,11 +171,14 @@ $.ajax({
     console.log(response.data[0].common_name);
     var tBody = $("tbody");
     var tRow = $("<tr>");
+    var td = $("<td>");
+    var saveButton = $("<button class='btn btn-success'>").text("Save");
+    td.append(saveButton);
     var imagePlant = $("<img class='imagePlant'>").attr("src", response.data[0].image_url);
     var image_urlTd = $("<td>").append(imagePlant);
     var common_nameTd = $("<td>").text(response.data[0].common_name);
     var scientific_nameTd = $("<td>").text(response.data[0].scientific_name);
     var familyTd = $("<td>").text(response.data[0].family);
-    tRow.append(common_nameTd, image_urlTd, scientific_nameTd, familyTd);
+    tRow.append(td, common_nameTd, image_urlTd, scientific_nameTd, familyTd);
     tBody.append(tRow);
 });

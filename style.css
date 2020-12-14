@@ -28,7 +28,7 @@ a:visited {
     height: 250px;
 }
 
-#sciName {
+.sciName {
     font-style: italic;
 }
 
