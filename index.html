@@ -38,7 +38,7 @@
                     <div class="top-bar-right">
                         <ul class="menu">
                             <li><input type="search" placeholder="Where do you live?" id="search-input"></li>
-                            <li><button type="button" class="button radius bordered shadow success" type="submit"><i
+                            <li><button type="button" class="button radius bordered shadow success" id="search-button" type="submit"><i
                                         class="fa fa-envira" aria-hidden="true"></i>Search</button>
                         </ul>
                     </div>
@@ -63,17 +63,28 @@
                 <!-- Plant font icon -->
                 <i class="fa fa-pagelines fa-5x" aria-hidden="true"></i>
                 <section class="container medium-12 columns" id="main">
-                    <h3>
-                        <!--Description-->
-                        Plant Scout is a simple app where you can receive information about the weather conditions and local plants based on your location!
-                    </h3>
-                    <!--More Description-->
-                    <p>“The world is big and I want to have a good look at it before it gets dark.” – John Muir
-                    </p>
-                    <p>“Happiness is to hold flowers in both hands.” – Japanese Proverb
-                    </p>
-                    <p id="harvard-study">Spending time outside has physical and mental health benefits. According to a study from Harvard University, taking a 15 minute walk everyday can increase your Vitamin D levels, which helps fight cancer and diseases. Also, this physical activity can lead to weight-loss because your body is being put into motion. Lastly, a 15 minute daily walk improves your mental happiness because light tends to elevate your mood and self-esteem.
-                    </p>
+                        <!--Plant Scout Description-->
+                        <h3>Plant Scout is a simple app where you can receive information about the weather conditions and local plants based on your location!</h3>
+                        <!--Nature Quotes-->
+                        <p>“The world is big and I want to have a good look at it before it gets dark.” – John Muir
+                        </p>
+                        <p>“Happiness is to hold flowers in both hands.” – Japanese Proverb
+                        </p>
+                        <!-- Facts about taking daily nature walks -->
+                        <p id="harvard-study">Spending time outside has physical and mental health benefits. According to a study from Harvard University, taking a 15 minute walk everyday can increase your Vitamin D levels, which helps fight cancer and diseases. Also, this physical activity can lead to weight-loss because your body is increasing its motion. Lastly, a 15 minute daily walk improves your mental happiness because light tends to elevate your mood and self-esteem.
+                        </p>
+                    <!-- Display weather API -->
+                        <h1 class="display-3" id="city-name"></h1>
+                        <p class="lead" id="current-weather-header">Here is the current weather for the area where you want to go plant scouting.
+                        </p>
+                        <hr class="my-4">
+                        <p class="temperature" id="temp"></p>
+                        <p class="sunrise" id="sunrise"></p>
+                        <p class="humidity" id="humidity"></p>
+                        <p class="sunset" id="sunset"></p>
+                        <p class="uv-index" id="uv-index"></p>
+                        <p class="visibility" id="visibility"></p>
+
                     <div id="test"></div>
                 </section>
             </section>

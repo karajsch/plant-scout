@@ -9,7 +9,6 @@ body {
 }
 
 p {
-    text-align: justify;
     color: #333;
     font-size: 25px;
     font-style: italic;
@@ -111,4 +110,12 @@ a:visited {
 #forestPath {
     width: 550px;
     height: 750px;
+}
+
+#current-weather-header {
+    color: #333;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 40px;
 }
