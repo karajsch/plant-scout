@@ -37,32 +37,34 @@ function get_from_local_storage() {
     $("#savedPlants").empty()
     let saved = JSON.parse(localStorage.getItem("saved"))
     console.log(saved)
-    saved.forEach(plant => {
-        console.log(plant)
-        $("#savedPlants").append(`<li><a href="#">&nbsp;&nbsp${plant}</a></li>`)
+    // conditional to make sure it is not null
+    if (saved) {
+        saved.forEach(plant => {
+            console.log(plant)
+            $("#savedPlants").append(`<li><a href="#">&nbsp;&nbsp${plant}</a></li>`)
+        })
+    }
+
+    $(document).ready(() => {
+        get_from_local_storage()
+        $("#plant-search-button").on("click", () => {
+            let searched = $("#plant-search").val()
+            retrieve_plant(searched)
+            document.getElementById("plant-search").value = "";
+        })
+
+        //WHEN I receive my plant results
+        $("table").on("click", ".save-btn", function () {
+            let selected = $(this).parent().siblings("td.common_name")[0].innerText
+            let old = JSON.parse(localStorage.getItem("saved"))
+            old.push(selected)
+            localStorage.setItem("saved", JSON.stringify(old))
+            get_from_local_storage()
+        })
+        //THEN I can click on the "save" button for the ones I want to keep
+        //THEN they appear in the "My Saved Plants" div
+        //retrieve_plant("rose")
+
     })
 
 }
-
-$(document).ready(() => {
-    get_from_local_storage()
-    $("#plant-search-button").on("click", () => {
-        let searched = $("#plant-search").val()
-        retrieve_plant(searched)
-        document.getElementById("plant-search").value = "";
-    })
-
-    //WHEN I receive my plant results
-    $("table").on("click", ".save-btn", function () {
-        let selected = $(this).parent().siblings("td.common_name")[0].innerText
-        let old = JSON.parse(localStorage.getItem("saved"))
-        old.push(selected)
-
-        localStorage.setItem("saved", JSON.stringify(old))
-        get_from_local_storage()
-    })
-    //THEN I can click on the "save" button for the ones I want to keep
-    //THEN they appear in the "My Saved Plants" div
-    retrieve_plant("rose")
-
-})
