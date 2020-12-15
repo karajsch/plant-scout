@@ -1,3 +1,5 @@
+var savedChoices = [];
+
 function retrieve_plant(plant) {
     $("tbody").empty()
     var queryURL = "https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=k-sJ91dZASAK9fMJxEhTacaKeN9cBPDY5nOmcWJsusk&filter[common_name]=" + plant;
@@ -37,9 +39,22 @@ $("#plant-search-button").on("click", function (event) {
     retrieve_plant(searched)
     document.getElementById("plant-search").value = "";
 })
+
+//WHEN I receive my plant results
+
+$("table").on("click", ".save-btn", function () {
+    console.log("You clicked me");
+    let selected = $(this).parent().siblings("td.common_name")[0].innerText
+    console.log(selected);
+
+
+    savedChoices.push(selected)
+    localStorage.setItem("saved", JSON.stringify(savedChoices))
+    get_from_local_storage()
+})
+
 //WHEN I push the save plant button
 //THEN the name of the plant appears in My Saved Plants
-
 function get_from_local_storage() {
     $("#savedPlants").empty()
     let saved = JSON.parse(localStorage.getItem("saved"))
@@ -51,23 +66,4 @@ function get_from_local_storage() {
             $("#savedPlants").append(`<li><a href="#">&nbsp;&nbsp${plant}</a></li>`)
         })
     }
-    //WHEN I receive my plant results
-
-    $("table").on("click", ".save-btn", function () {
-        let selected = $(this).parent().siblings("td.common_name")[0].innerText
-        console.log(selected);
-        var savedChoices = [];
-
-        savedChoices.push(selected)
-        localStorage.setItem("saved", JSON.stringify(savedChoices))
-        get_from_local_storage()
-    })
-    get_from_local_storage()
-
-    //THEN I can click on the "save" button for the ones I want to keep
-    //THEN they appear in the "My Saved Plants" div
-    //retrieve_plant("rose")
-
-
-
 }
