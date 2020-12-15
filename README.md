@@ -26,8 +26,8 @@ Presentation Link: https://docs.google.com/presentation/d/1tnaGl0qNMopLVVeow6DjO
 # About The Project
 The name of our app is called Plant Scout. The purpose of this project was to create an application within the web browser that would retrieve, display, and save weather data for cities. It also retrieves, displays, and saves data of all types of plants. Plant Scout is ideal for anyone who wants to know their local weather conditions and information about plants. We used two Application Programming Interfaces (API's) in this project. The first was Open Weather Map, which is a weather API that contains data of weather conditions in over 200,000 cities. And the second was Trefle, which is a botanical API and database that contains information about plants all over the world. When the user enters in their city, Plant Scout displays the current forecast for the day, which includes the temperature, humidity, UV index, visibility, sunrise, and sunset. When the user enters in the type of plant they are interested in, Plant Scout displays a list of various plants within their search category. It displays the plant's common, scientific, and family name as well as a picture of the plant. 
 
-<img src="plant-scout-screenshot-1.png" alt="screenshot 1">
-<img src="plant-scout-screenshot-2.png" alt="screenshot 2">
+<img src="https://i.ibb.co/LxTX0yJ/Screen-Shot-2020-12-15-at-12-16-12-PM.png" alt="Screen-Shot-2020-12-15-at-12-16-12-PM" border="0">
+<img src="https://i.ibb.co/vqZjkpS/Screen-Shot-2020-12-15-at-12-16-42-PM.png" alt="Screen-Shot-2020-12-15-at-12-16-42-PM" border="0">
 
 ### Built With
 The code quiz web application was created with these coding languages:
